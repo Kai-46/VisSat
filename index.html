@@ -1,0 +1,182 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>Leveraging Vision Pipelines for Satellite Imagery</title>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+  <link href="css/frame.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/controls.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href="css/custom.css" media="screen" rel="stylesheet" type="text/css" />
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="js/menu.js"></script>
+  <style>
+    .menu-index {
+      color: rgb(255, 255, 255) !important;
+      opacity: 1 !important;
+      font-weight: 700 !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="menu-container"></div>
+  <div class="content-container">
+    <div class="content">
+      <div class="content-table flex-column">
+
+        <!--Title and Author-->
+        <div class="flex-row">
+          <div class="flex-item flex-column full-width">
+            <h1 class="text" align="center">Leveraging Vision Pipelines for Satellite Imagery</h1>
+            <p class="text" align="center">
+              Kai Zhang,&nbsp;<a href="http://cs.cornell.edu/~snavely">Noah Snavely,</a>&nbsp;<a href="http://www.cs.cornell.edu/~jinsun/">Jin Sun</a><br>
+              <a href="https://tech.cornell.edu/">Cornell Tech, Cornell University</a>
+          </div>
+        </div>
+        <!--End of Title And Author-->
+
+        <!--Abstract-->
+        <div class="flex-row">
+          <div class="flex-item flex-column full-width">
+            <p class="text add-top-margin">
+Reconstructing 3D geometry from satellite imagery is an important topic of research. However, disparities exist between how this 3D reconstruction problem is handled in the remote sensing context and how multi-view reconstruction pipelines have been developed in the computer vision community. In this project, we explore whether state-of-the-art reconstruction pipelines from the vision community can be applied to the satellite imagery. Along the way, we address several challenges adapting vision-based structure from motion and multi-view stereo methods. We show that vision pipelines can offer competitive speed and accuracy in the satellite context.
+            </p>
+          </div>
+        </div>
+        <!--End of Abstarct-->
+
+        <!--Approach-->
+        <div class="flex-row">
+          <div class="flex-item flex-column full-width">
+            <h2 class="text add-top-margin">Our Approach</h2>
+            <hr>
+            <a href="./my_files/overview.png" class="flex-column"><img class="image" src="./my_files/overview.png"></a>
+          </div>
+        </div>
+        <!--End of Approach-->
+
+        <!--Main Result-->
+        <div class="flex-row" id="example-result">
+          <div class="flex-item flex-column full-width">
+            <h2 class="text add-top-margin">Example Result</h2>
+            <hr>
+
+         <p class="text add-top-margin">
+            View the 47 input images&nbsp;<a href="https://drive.google.com/drive/folders/14jxu_hoRTCDoS_iD8k8nX2etVpwn_GmT?usp=sharing">[link]</a>. The resolution of these images is around 30 cm per pixel.
+          </p>
+
+          <iframe src="./my_files/pointcloud.html" width="100%" height="500px" style="display: block;"></iframe>
+
+          <div class="gallery">
+            <a href="./my_files/target_after_align.jpg" class="flex-column"><img src="./my_files/target_after_align.jpg">
+              <div>Ground-truth Height Map</div>
+            </a>
+            <a href="./my_files/source_after_align.jpg" class="flex-column"><img src="./my_files/source_after_align.jpg">
+              <div>Our Height Map</div>
+            </a>
+            <a href="./my_files/error_map.jpg" class="flex-column"><img src="./my_files/error_map.jpg">
+              <div>Error Map</div>
+            </a>
+            <a href="./my_files/color_bar.png" class="flex-column"><img src="./my_files/color_bar.png">
+              <div>Color Bar (Unit is Meter)</div>
+            </a>
+          </div>
+          <p class="text">
+          Metric numbers: median height error is 0.315 meters; completeness score is 72.5%. (completeness score is defined as the percentage of non-empty ground-truth height map cells where the reconstructed height value exists and is within 1 meter error from the ground-truth value.  ) 
+          </p>
+          </div>
+        </div>
+        <!--End of Main Result-->
+
+        <!--Paper-->
+        <div class="flex-row" id="paper">
+          <div class="flex-item flex-column full-width">
+            <h2 class="text add-top-margin">Paper</h2>
+            <hr>
+          </div>
+
+          <div class="flex-item flex-item-stretch flex-column">
+            <a href="./my_files/paper.pdf"><img class="image max-width-400" src="./my_files/paper_cover.png"></a>
+          </div>
+
+          <div class="flex-item flex-item-stretch-4 flex-column">
+            <p class="text">
+            <a href="./my_files/paper.pdf">[pdf]</a>&nbsp;&nbsp;<a href="">[arxiv]</a>&nbsp;&nbsp;<a href="./my_files/paper_supp.pdf">[supplementary]</a>
+            </p>
+            <p class="text">
+              @inproceedings{VisSat-2019,<br>
+                  &nbsp;title={Leveraging Vision Pipelines for Satellite Imagery},<br>
+                  &nbsp;author={Zhang, Kai and Snavely, Noah and Sun, Jin},<br>
+                  &nbsp;booktitle={IEEE International Conference on Computer Vision Workshops},<br>
+                &nbsp;year={2019}<br>
+              }<br></p>
+          </div>
+        </div>
+
+        <!--Code-->
+        <div class="flex-row" id="code">
+          <div class="flex-item flex-column full-width">
+            <h2 class="add-top-margin">Code</h2>
+            <hr>
+            <p class="text">
+              Coming soon...
+            </p>
+        </div>
+        <!--End of Code-->
+
+        <!--Data-->
+        <div class="flex-row" id="Data">
+          <div class="flex-item flex-column full-width">
+            <h2 class="add-top-margin">Data</h2>
+            <hr>
+            <p class="text">
+              Our method converts the satellite imagery data to more conventional and accessible format:
+            </p>
+            <ul>
+                <li>HDR images are tonemapped to LDR.</li>
+                <li>RPC cameras are approximated with perspective cameras, which then are bundle-adjusted by our pipline.</li>
+            </ul>
+            <p class="text">
+              You can <a href="https://drive.google.com/drive/folders/14-xbQKs0X0Wa4LNHizutg4wXYNqMSpqu?usp=sharing">download our data from  here</a>. If you perform Multi-view Stereo on these images and cameras, the reconstructed point cloud will be in the local ENU coordinate system. We <a href="https://drive.google.com/drive/folders/1ADStJOEV8AztDVYvVptPL4ASyjbVqYYi?usp=sharing">provide this accompanying toolset</a> to convert the points' coordinates to the global coordinate system, i.e., (UTM east, UTM north, altitude), and report its accuracy by comparing to the ground-truth. 
+            </p>
+
+            <p class="text">
+Our data is based upon the <a href="https://spacenetchallenge.github.io/datasets/mvs_summary.html">public remote sensing dataset</a>. If you use our transformed data in your work, please include the following citations:
+            </p>
+            <ul>
+              <li>@inproceedings{VisSat-2019,<br>
+                  &nbsp;title={Leveraging Vision Pipelines for Satellite Imagery},<br>
+                  &nbsp;author={Zhang, Kai and Snavely, Noah and Sun, Jin},<br>
+                  &nbsp;booktitle={IEEE International Conference on Computer Vision Workshops},<br>
+                &nbsp;year={2019}<br>
+              }<br></li>
+              <li>@inproceedings{bosch2016multiple,<br>
+                  &nbsp;title={A multiple view stereo benchmark for satellite imagery},<br>
+                  &nbsp;author={Bosch, Marc and Kurtz, Zachary and Hagstrom, Shea and Brown, Myron},<br>
+                  &nbsp;booktitle={IEEE Applied Imagery Pattern Recognition Workshops},<br>
+                &nbsp;year={2016}<br>
+              }<br></li>
+            </ul>
+        </div>
+        <!--End of Data-->
+
+        <!--Acknowlegements-->
+        <div class="flex-row">
+          <div class="flex-item flex-column full-width">
+            <h2 class="add-top-margin">Acknowledgements</h2>
+            <hr>
+            <p class="text">
+The research is based upon work supported by the Office of the Director of National Intelligence (ODNI), Intelligence Advanced Research Projects Activity (IARPA), via DOI/IBC Contract Number D17PC00287. The views and conclusions contained herein are those of the authors and should not be interpreted as necessarily representing the official policies or endorsements, either expressed or implied, of the ODNI, IARPA, or the U.S. Government. The U.S. Government is authorized to reproduce and distribute reprints for Governmental purposes notwithstanding any copyright annotation thereon.
+            </p>
+          </div>
+        </div>
+        <!--End of Acknowledgements-->
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
