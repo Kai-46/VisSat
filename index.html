@@ -64,12 +64,25 @@ Reconstructing 3D geometry from satellite imagery is an important topic of resea
             <h2 class="text add-top-margin">Example Result</h2>
             <hr>
 
+         <h3 class="text add-top-margin">Input Images</h3>
+          <div class="gallery">
+            <a href="./my_files/0000_WV03_14NOV15_135121-P1BS-500171606160_05_P005.png" class="flex-column"><img src="./my_files/0000_WV03_14NOV15_135121-P1BS-500171606160_05_P005.png">
+            </a>
+            <a href="./my_files/0001_WV03_15JAN05_135727-P1BS-500497282040_01_P001.png" class="flex-column"><img src="./my_files/0001_WV03_15JAN05_135727-P1BS-500497282040_01_P001.png">
+            </a>
+            <a href="./my_files/0002_WV03_15JAN11_135414-P1BS-500497283010_01_P001.png" class="flex-column"><img src="./my_files/0002_WV03_15JAN11_135414-P1BS-500497283010_01_P001.png">
+            </a>
+            <p class="flex-column"><font size="50">...</font></p>
+          </div>
+
          <p class="text add-top-margin">
-            View the 47 input images&nbsp;<a href="https://drive.google.com/drive/folders/14jxu_hoRTCDoS_iD8k8nX2etVpwn_GmT?usp=sharing">[link]</a>. The resolution of these images is around 30 cm per pixel.
+            View all the 47 input images&nbsp;<a href="https://drive.google.com/drive/folders/14jxu_hoRTCDoS_iD8k8nX2etVpwn_GmT?usp=sharing">[link]</a>. The resolution of these images is around 30 cm per pixel.
           </p>
 
+          <h3 class="text add-top-margin">Reconstructed Point Cloud</h3>
           <iframe src="./my_files/pointcloud.html" width="100%" height="500px" style="display: block;"></iframe>
 
+          <h3 class="text add-top-margin">Metric Numbers</h3>
           <div class="gallery">
             <a href="./my_files/target_after_align.jpg" class="flex-column"><img src="./my_files/target_after_align.jpg">
               <div>Ground-truth Height Map</div>
@@ -85,7 +98,9 @@ Reconstructing 3D geometry from satellite imagery is an important topic of resea
             </a>
           </div>
           <p class="text">
-          Metric numbers: median height error is 0.315 meters; completeness score is 72.5%. (completeness score is defined as the percentage of non-empty ground-truth height map cells where the reconstructed height value exists and is within 1 meter error from the ground-truth value.  ) 
+          Median height error is 0.315 meters; completeness score is 72.5%. (completeness score is defined as the percentage of non-empty ground-truth height map cells where the reconstructed height value exists and is within 1 meter error from the ground-truth value.  ) <br><br>
+
+          Our method makes possible transferring working 3D reconstruction solutions from computer vision community to satellite images. While being competitive in accuracy, it also embraces increased scalability and efficiency. In the long run, our goal is to bridge the gap on how 3D reconstruction is tackled between the computer vision community and the remote sensing community. 
           </p>
           </div>
         </div>
