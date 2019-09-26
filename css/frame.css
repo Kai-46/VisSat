@@ -303,6 +303,13 @@ hr {
   display: flex;
 }
 
+.image-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 .image img,
 .image video {
   width: 100%;
