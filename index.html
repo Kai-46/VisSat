@@ -76,7 +76,7 @@ Reconstructing 3D geometry from satellite imagery is an important topic of resea
           </div>
 
          <p class="text add-top-margin">
-            View all the 47 input images&nbsp;<a href="https://drive.google.com/drive/folders/14jxu_hoRTCDoS_iD8k8nX2etVpwn_GmT?usp=sharing">[link]</a>. The resolution of these images is around 30 cm per pixel.
+            View all 47 input images&nbsp;<a href="https://drive.google.com/drive/folders/14jxu_hoRTCDoS_iD8k8nX2etVpwn_GmT?usp=sharing">[link]</a>. The resolution of these images is around 30 cm per pixel.
           </p>
 
           <h3 class="text add-top-margin">Reconstructed Point Cloud</h3>
@@ -98,9 +98,9 @@ Reconstructing 3D geometry from satellite imagery is an important topic of resea
             </a>
           </div>
           <p class="text">
-          Median height error is 0.315 meters; completeness score is 72.5%. (completeness score is defined as the percentage of non-empty ground-truth height map cells where the reconstructed height value exists and is within 1 meter error from the ground-truth value.  ) <br><br>
+          Median height error is 0.315 meters; completeness score is 72.5%. (completeness score is defined as the percentage of non-empty ground-truth height map cells where the reconstructed height value exists and is within 1 meter of the ground-truth value.) <br><br>
 
-          Our method makes possible transferring working 3D reconstruction solutions from computer vision community to satellite images. While being competitive in accuracy, it also embraces increased scalability and efficiency. In the long run, our goal is to bridge the gap on how 3D reconstruction is tackled between the computer vision community and the remote sensing community. 
+          Our work makes it possible to apply state-of-the-art 3D reconstruction methods from the computer vision community to satellite images. We show that our method is competitive in accuracy compared to a state-of-the-art pipeline specific to satellite imagery, while also demonstrating scalability and efficiency. In the long run, our goal is to bridge the gap between 3D reconstruction methods in the computer vision and remote sensing communities. 
           </p>
           </div>
         </div>
@@ -155,11 +155,11 @@ Reconstructing 3D geometry from satellite imagery is an important topic of resea
                 <li>RPC cameras are approximated with perspective cameras, which then are bundle-adjusted by our pipline.</li>
             </ul>
             <p class="text">
-              You can <a href="https://drive.google.com/drive/folders/14-xbQKs0X0Wa4LNHizutg4wXYNqMSpqu?usp=sharing">download our data from  here</a>. If you perform Multi-view Stereo on these images and cameras, the reconstructed point cloud will be in the local ENU coordinate system. We <a href="https://drive.google.com/drive/folders/1ADStJOEV8AztDVYvVptPL4ASyjbVqYYi?usp=sharing">provide this accompanying toolset</a> to convert the points' coordinates to the global coordinate system, i.e., (UTM east, UTM north, altitude), and report its accuracy by comparing to the ground-truth. 
+              You can <a href="https://drive.google.com/drive/folders/14-xbQKs0X0Wa4LNHizutg4wXYNqMSpqu?usp=sharing">download our data here</a>. If you perform Multi-view Stereo on these images and cameras, the reconstructed point cloud will be in a local ENU coordinate system. We <a href="https://drive.google.com/drive/folders/1ADStJOEV8AztDVYvVptPL4ASyjbVqYYi?usp=sharing">provide this accompanying toolset</a> to convert the points' coordinates to the global coordinate system, i.e., (UTM east, UTM north, altitude), and report its accuracy by comparing to the ground-truth. 
             </p>
 
             <p class="text">
-Our data is based upon the <a href="https://spacenetchallenge.github.io/datasets/mvs_summary.html">public remote sensing dataset</a>. If you use our transformed data in your work, please include the following citations:
+Our data is based upon the <a href="https://spacenetchallenge.github.io/datasets/mvs_summary.html">public IARPA Multi-View Stereo 3D Mapping Challenge remote sensing dataset</a>. If you use our transformed data in your work, please include the following citations:
             </p>
             <ul>
               <li>@inproceedings{VisSat-2019,<br>
